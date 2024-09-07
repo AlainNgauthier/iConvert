@@ -11,10 +11,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alaingauthier1.iconvert.databinding.FragmentRatesBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.util.Locale
 import kotlin.random.Random
 
+@AndroidEntryPoint
 class RatesFragment : Fragment() {
 
     private lateinit var binding: FragmentRatesBinding

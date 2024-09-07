@@ -1,9 +1,11 @@
 package com.alaingauthier1.iconvert.model
 
 import com.alaingauthier1.iconvert.RatesItem
+import javax.inject.Inject
 import kotlin.random.Random
 
-class RatesRepository {
+// Inject: tell to Hilt to provide an instance of rates repository whenever its required
+class RatesRepository @Inject constructor() {
 
     fun getRates(): List<RatesItem> {
         return generateMockRates()
