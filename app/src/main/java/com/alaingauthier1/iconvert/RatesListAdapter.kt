@@ -24,5 +24,9 @@ class RatesListAdapter: Adapter<RatesViewHolder>() {
         ratesList.getOrNull(position)?.let{holder.bind(it)}
     }
 
-    fun updateList(data: List<RatesItem>) {}
+    fun updateList(data: List<RatesItem>) {
+        ratesList.clear()
+        ratesList.addAll(data)
+        notifyDataSetChanged()
+    }
 }
