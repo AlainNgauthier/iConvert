@@ -52,7 +52,4 @@ class RatesFragment : Fragment() {
             adapter = ratesAdapter
         }
     }
-
-
-
 }
