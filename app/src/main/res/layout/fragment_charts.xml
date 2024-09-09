@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".ChartsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_margin="8dp"
+        android:src="@drawable/show_chart"
+        android:contentDescription="@string/cd_chart_views"/>
 
 </FrameLayout>
