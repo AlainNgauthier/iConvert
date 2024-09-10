@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="10dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp">
@@ -12,26 +13,26 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textSymbol"
+            android:id="@+id/textSymbolCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="USD"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="USD" />
 
-        <TextView
-            android:id="@+id/textRate"
+        <CheckBox
+            android:id="@+id/checkBoxSelectedSymbol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/textSymbolCode"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="5.615"/>
+            android:text=""
+            app:layout_constraintTop_toTopOf="@id/textSymbolCode" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.cardview.widget.CardView>

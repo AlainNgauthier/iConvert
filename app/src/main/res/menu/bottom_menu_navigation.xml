@@ -6,9 +6,9 @@
         android:icon="@drawable/currency_exchange"
         android:title="@string/rates"/>
 
-    <item
-        android:id="@+id/chartsFragment"
-        android:enabled="true"
-        android:icon="@drawable/show_chart"
-        android:title="@string/charts"/>
+<!--    <item-->
+<!--        android:id="@+id/aboutFragment"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/show_chart"-->
+<!--        android:title="@string/about"/>-->
 </menu>

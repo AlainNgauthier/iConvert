@@ -1,11 +1,11 @@
-package com.alaingauthier1.iconvert
+package com.alaingauthier1.iconvert.screen.rates
 
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.alaingauthier1.iconvert.RatesItem
 import com.alaingauthier1.iconvert.databinding.RatesListItemBinding
 
-class RatesViewHolder(
-    private val binding: RatesListItemBinding
-): ViewHolder(binding.root) {
+class RatesViewHolderItemRate(
+    binding: RatesListItemBinding
+): RatesViewHolderBase<RatesListItemBinding>(binding) {
     fun bind(item: RatesItem) {
         with(binding) {
             textSymbol.text = item.symbolCode

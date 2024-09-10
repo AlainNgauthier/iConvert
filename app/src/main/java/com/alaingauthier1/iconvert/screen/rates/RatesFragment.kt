@@ -1,4 +1,4 @@
-package com.alaingauthier1.iconvert
+package com.alaingauthier1.iconvert.screen.rates
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,18 +9,18 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alaingauthier1.iconvert.R
 import com.alaingauthier1.iconvert.databinding.FragmentRatesBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import java.util.Locale
-import kotlin.random.Random
 
 @AndroidEntryPoint
 class RatesFragment : Fragment() {
 
     private lateinit var binding: FragmentRatesBinding
-    private val ratesAdapter = RatesListAdapter()
+    private val ratesAdapter = RatesListAdapter{ onAddNewCurrencyClicked() }
     private val viewModel: RatesViewModel by viewModels()
 
     init {
@@ -51,5 +51,9 @@ class RatesFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
             adapter = ratesAdapter
         }
+    }
+    // Handler onClick on buttons
+    private fun onAddNewCurrencyClicked() {
+        findNavController().navigate(R.id.editSymbolsFragment)
     }
 }

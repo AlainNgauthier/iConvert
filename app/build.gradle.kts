@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
     implementation(libs.hilt.android)
+    implementation(libs.androidx.legacy.support.v4)
     kapt(libs.hilt.android.compiler)
 
     // for jetpack navigation

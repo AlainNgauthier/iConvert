@@ -1,7 +1,8 @@
-package com.alaingauthier1.iconvert
+package com.alaingauthier1.iconvert.screen.rates
 
 import androidx.lifecycle.ViewModel
-import com.alaingauthier1.iconvert.use_case.GetRatesUseCase
+import com.alaingauthier1.iconvert.RatesItem
+import com.alaingauthier1.iconvert.use_case.GetSelectedRatesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -10,7 +11,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RatesViewModel @Inject constructor(
-    private val getRatesUseCase: GetRatesUseCase
+    private val getRatesUseCase: GetSelectedRatesUseCase
 ): ViewModel() {
 
     private val _rates: MutableStateFlow<List<RatesItem>> = MutableStateFlow(emptyList())
