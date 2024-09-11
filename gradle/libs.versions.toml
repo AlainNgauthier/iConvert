@@ -10,6 +10,7 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.6.1"
+kotlinxSerializationJson = "1.5.0"
 lifecycleViewmodelSavedstate = "2.8.5"
 material = "1.10.0"
 activity = "1.9.1"
@@ -17,6 +18,9 @@ constraintlayout = "2.1.4"
 materialVersion = "1.11.0"
 navigationFragmentKtx = "2.8.0"
 legacySupportV4 = "1.0.0"
+okhttp = "4.9.3"
+retrofit = "2.9.0"
+retrofit2KotlinxSerializationConvert = "1.0.0"
 
 [libraries]
 androidx-appcompat-v170 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
@@ -36,11 +40,16 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 material-v1110 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit2-kotlinx-serialization-convert = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-convert", version.ref = "retrofit2KotlinxSerializationConvert" }
+retrofit2-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConvert" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

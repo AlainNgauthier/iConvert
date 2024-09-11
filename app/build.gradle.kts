@@ -70,6 +70,8 @@ dependencies {
     implementation(project(":service:rates_repository"))
     implementation(project(":service:rates_repository_impl"))
     implementation(project(":service:use_case"))
+    implementation(project(":service:retrofit"))
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

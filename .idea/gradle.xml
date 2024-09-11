@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/service/common" />
             <option value="$PROJECT_DIR$/service/rates_repository" />
             <option value="$PROJECT_DIR$/service/rates_repository_impl" />
+            <option value="$PROJECT_DIR$/service/retrofit" />
             <option value="$PROJECT_DIR$/service/use_case" />
             <option value="$PROJECT_DIR$/service/user_settings" />
             <option value="$PROJECT_DIR$/service/user_settings_impl" />
