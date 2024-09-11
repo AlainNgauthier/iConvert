@@ -1,6 +1,6 @@
 package com.alaingauthier1.iconvert.screen.rates
 
-import com.alaingauthier1.iconvert.RatesItem
+import com.alaingauthier1.common.model.RatesItem
 import com.alaingauthier1.iconvert.databinding.RatesListItemBinding
 
 class RatesViewHolderItemRate(

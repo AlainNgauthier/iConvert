@@ -1,8 +1,8 @@
 package com.alaingauthier1.iconvert.screen.rates
 
 import androidx.lifecycle.ViewModel
-import com.alaingauthier1.iconvert.RatesItem
-import com.alaingauthier1.iconvert.use_case.GetSelectedRatesUseCase
+import com.alaingauthier1.common.model.RatesItem
+import com.alaingauthier1.use_case.GetSelectedRatesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

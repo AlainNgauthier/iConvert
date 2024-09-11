@@ -1,7 +1,7 @@
 package com.alaingauthier1.iconvert.screen.edit_symbols
 
 import androidx.recyclerview.widget.RecyclerView
-import com.alaingauthier1.iconvert.SymbolItem
+import com.alaingauthier1.common.model.SymbolItem
 import com.alaingauthier1.iconvert.databinding.EditSymbolsItemsViewBinding
 
 class EditSymbolsViewHolder(

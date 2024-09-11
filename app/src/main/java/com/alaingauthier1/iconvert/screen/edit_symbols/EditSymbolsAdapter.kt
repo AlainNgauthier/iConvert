@@ -3,7 +3,7 @@ package com.alaingauthier1.iconvert.screen.edit_symbols
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.alaingauthier1.iconvert.SymbolItem
+import com.alaingauthier1.common.model.SymbolItem
 import com.alaingauthier1.iconvert.databinding.EditSymbolsItemsViewBinding
 
 class EditSymbolsAdapter (

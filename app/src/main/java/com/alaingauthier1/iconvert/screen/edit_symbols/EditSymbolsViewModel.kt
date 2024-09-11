@@ -2,9 +2,9 @@ package com.alaingauthier1.iconvert.screen.edit_symbols
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.alaingauthier1.iconvert.SymbolItem
-import com.alaingauthier1.iconvert.use_case.GetAvailableSymbolsUseCase
-import com.alaingauthier1.iconvert.use_case.SelectedSymbolsUseCase
+import com.alaingauthier1.common.model.SymbolItem
+import com.alaingauthier1.use_case.GetAvailableSymbolsUseCase
+import com.alaingauthier1.use_case.SelectedSymbolsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

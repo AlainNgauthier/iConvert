@@ -1,9 +1,9 @@
 package com.alaingauthier1.iconvert.di
 
-import com.alaingauthier1.iconvert.UserSettings
-import com.alaingauthier1.iconvert.UserSettingsImpl
-import com.alaingauthier1.iconvert.model.RatesRepository
-import com.alaingauthier1.iconvert.model.RatesRepositoryImpl
+import com.alaingauthier1.user_settings.UserSettings
+import com.alaingauthier1.user_settings_impl.UserSettingsImpl
+import com.alaingauthier1.rates_repository.RatesRepository
+import com.alaingauthier1.rates_repository_impl.RatesRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

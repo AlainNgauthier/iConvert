@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.viewbinding.ViewBinding
-import com.alaingauthier1.iconvert.RatesItem
+import com.alaingauthier1.common.model.RatesItem
 import com.alaingauthier1.iconvert.databinding.RatesListAddItemBinding
 import com.alaingauthier1.iconvert.databinding.RatesListItemBinding
 

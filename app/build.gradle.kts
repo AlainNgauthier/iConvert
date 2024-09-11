@@ -64,6 +64,13 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+    implementation(project(":service:common"))
+    implementation(project(":service:user_settings"))
+    implementation(project(":service:user_settings_impl"))
+    implementation(project(":service:rates_repository"))
+    implementation(project(":service:rates_repository_impl"))
+    implementation(project(":service:use_case"))
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

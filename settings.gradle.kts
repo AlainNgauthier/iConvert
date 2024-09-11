@@ -21,3 +21,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "Iconvert"
 include(":app")
+include("service:common")
+include(":service:user_settings")
+include(":service:user_settings_impl")
+include(":service:rates_repository")
+include(":service:rates_repository_impl")
+include(":service:use_case")
