@@ -8,18 +8,18 @@
     <fragment
         android:id="@+id/ratesFragment"
         android:name="com.alaingauthier1.iconvert.screen.rates.RatesFragment"
-        android:label="fragment_rates"
+        android:label="@string/title_rates"
         tools:layout="@layout/fragment_rates" />
 
     <fragment
         android:id="@+id/editSymbolsFragment"
         android:name="com.alaingauthier1.iconvert.screen.edit_symbols.EditSymbolsFragment"
-        android:label="fragment_edit_symbols"
+        android:label="@string/title_currency_list"
         tools:layout="@layout/fragment_edit_symbols" />
 
 <!--    <fragment-->
 <!--        android:id="@+id/aboutsFragment"-->
 <!--        android:name="com.alaingauthier1.iconvert.AboutFragment"-->
-<!--        android:label="fragment_charts"-->
+<!--        android:label="fragment_about"-->
 <!--        tools:layout="@layout/fragment_charts" />-->
 </navigation>

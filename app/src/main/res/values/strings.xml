@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">iConvert</string>
-    <string name="rates">Rates</string>
+    <string name="rates">Taxas</string>
     <string name="about">About</string>
 
     <string name="cd_about_views">Chart View</string>
-    <string name="add_currency">Add Currency</string>
+    <string name="add_currency">Adicione moeda(s)</string>
+
+    <string name="title_rates">iConvert</string>
+    <string name="title_currency_list">Selecione moeda(s)</string>
 </resources>
