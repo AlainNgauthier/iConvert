@@ -1,6 +1,6 @@
 # iConverte, um aplicativo Android Multi-Modular 
 
-O iConvertor é um projeto de aplicação Androidque utiliza a arquitetura MVVM, Hilt para injeção de dependências, Retrofit para trabalhar com API e Shared Preferences para armazenamento de dados.
+O iConvertor é um projeto de aplicação Android que eu desenvolvi para a disciplina Desenvolvimento Móvel que utiliza a arquitetura MVVM, Hilt para injeção de dependências, Retrofit para trabalhar com API e Shared Preferences para armazenamento de dados.
 
 ## Arquitetura
 
