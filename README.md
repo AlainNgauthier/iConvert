@@ -1,3 +1,7 @@
+### Alain Gauthier N. Djamba, RA 725921
+
+
+
 # iConvert 
 
 O iConvert, projeto de aplicação Android que eu desenvolvi para a disciplina Desenvolvimento Móvel da Universidade Federal de São Carlos, 
@@ -27,3 +31,10 @@ A arquitetura do projeto segue o padrão MVVM (Model-View-ViewModel):
 - Gradle 6.5 ou superior
 
 ![Print do iConvert](iConvert-img.png)
+
+### Passos para Configuração
+
+1. Clone o repositório
+2. Abra o projeto no Android Studio.
+3. Sincronize o projeto com os arquivos Gradle.
+4. Execute o projeto em um emulador ou dispositivo físico.
