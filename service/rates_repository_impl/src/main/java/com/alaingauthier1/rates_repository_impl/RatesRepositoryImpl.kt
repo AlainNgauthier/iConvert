@@ -5,6 +5,8 @@ import com.alaingauthier1.common.model.SymbolItem
 import com.alaingauthier1.rates_repository.RatesApiService
 import com.alaingauthier1.rates_repository.RatesRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -15,7 +17,8 @@ import kotlin.random.Random
 class RatesRepositoryImpl @Inject constructor(
     private val ratesApiService: RatesApiService
 ) : RatesRepository {
-    private val data = generateMockRates()
+    private val availableSymbolsCache = mutableListOf<SymbolItem>()
+    private val mutex = Mutex()
 
     override suspend fun getRates(
         base: SymbolItem?,
@@ -33,22 +36,35 @@ class RatesRepositoryImpl @Inject constructor(
 //        return data.filter { symbols.any { symbol -> symbol.code == it.symbolCode } }
 //    }
 
-    override fun getAvailableSymbols() :List<SymbolItem> =
-        data.map { SymbolItem(it.symbolCode) }
-
-    private fun generateMockRates(): List<RatesItem>{
-        return (0 until 5).map {
-            RatesItem(
-                symbolCode = generateMockSymbolCode(),
-                rateValue = String.format(
-                    "%.4f",
-                    Random.nextInt(from = 10000, until = 99999) / 10000f
-                )
-            )
+    override suspend fun getAvailableSymbols() :List<SymbolItem> =
+        withContext(Dispatchers.IO) {
+            if(availableSymbolsCache.isEmpty()) {
+                mutex.withLock {
+                    if (availableSymbolsCache.isEmpty()) {
+                        availableSymbolsCache.clear()
+                        availableSymbolsCache.addAll(ratesApiService.getSymbols())
+                    }
+                }
+            }
+            availableSymbolsCache
         }
-    }
 
-    private fun generateMockSymbolCode(): String{
-        return (0 until 3).map{ Random.nextInt( from = 65, until = 98).toChar() }.joinToString(separator = "")
-    }
+    override suspend fun getSymbolItemByCode(code: String): SymbolItem? =
+        getAvailableSymbols().firstOrNull { it.code == code }
+
+//    private fun generateMockRates(): List<RatesItem>{
+//        return (0 until 5).map {
+//            RatesItem(
+//                symbolCode = generateMockSymbolCode(),
+//                rateValue = String.format(
+//                    "%.4f",
+//                    Random.nextInt(from = 10000, until = 99999) / 10000f
+//                )
+//            )
+//        }
+//    }
+
+//    private fun generateMockSymbolCode(): String{
+//        return (0 until 3).map{ Random.nextInt( from = 65, until = 98).toChar() }.joinToString(separator = "")
+//    }
 }

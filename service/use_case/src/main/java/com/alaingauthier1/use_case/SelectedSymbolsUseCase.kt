@@ -7,10 +7,10 @@ import javax.inject.Inject
 class SelectedSymbolsUseCase @Inject constructor (
     private val userSettings: UserSettings
 ) {
-    fun getSelectedSymbols(): List<SymbolItem> =
+    suspend fun getSelectedSymbols(): List<SymbolItem> =
         userSettings.getSelectedSymbols()
 
-    fun updateSelectedSymbols(symbols: List<SymbolItem>) {
+    suspend fun updateSelectedSymbols(symbols: List<SymbolItem>) {
         userSettings.setSelectedSymbols(symbols)
     }
 }

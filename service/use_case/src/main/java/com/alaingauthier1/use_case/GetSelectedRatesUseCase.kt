@@ -14,7 +14,7 @@ class GetSelectedRatesUseCase @Inject constructor(
         return repository.getRates(
             base = base,
             amount = amount,
-            symbols = null
+            symbols = userSettings.getSelectedSymbols()
         )
     }
 }

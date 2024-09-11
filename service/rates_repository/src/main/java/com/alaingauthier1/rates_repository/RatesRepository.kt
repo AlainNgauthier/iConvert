@@ -5,5 +5,6 @@ import com.alaingauthier1.common.model.SymbolItem
 
 interface RatesRepository {
     suspend fun getRates(base: SymbolItem?, amount: Double?, symbols: List<SymbolItem>?): List<RatesItem>
-    fun getAvailableSymbols(): List<SymbolItem>
+    suspend fun getAvailableSymbols(): List<SymbolItem>
+    suspend fun getSymbolItemByCode(code: String): SymbolItem?
 }

@@ -9,4 +9,6 @@ interface RatesApiService {
         amount: Double?,
         symbols: List<SymbolItem>?
     ): List<RatesItem>
+
+    suspend fun getSymbols(): List<SymbolItem>
 }

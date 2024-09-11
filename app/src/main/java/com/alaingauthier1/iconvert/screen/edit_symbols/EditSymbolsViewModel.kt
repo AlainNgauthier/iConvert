@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alaingauthier1.common.model.SymbolItem
 import com.alaingauthier1.use_case.GetAvailableSymbolsUseCase
+import com.alaingauthier1.use_case.GetSymbolByUseCase
 import com.alaingauthier1.use_case.SelectedSymbolsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -16,7 +17,9 @@ import javax.inject.Inject
 @HiltViewModel
 class EditSymbolsViewModel @Inject constructor(
     private val getAvailableSymbolsUseCase: GetAvailableSymbolsUseCase,
-    private val selectedSymbolsUseCase: SelectedSymbolsUseCase
+    private val selectedSymbolsUseCase: SelectedSymbolsUseCase,
+    private val symbolByCodeUseCase: GetSymbolByUseCase
+
 ) : ViewModel() {
     // TODO: Implement the ViewModel
     private val _selectedSymbols: MutableStateFlow<SelectedSymbols> =
@@ -35,15 +38,21 @@ class EditSymbolsViewModel @Inject constructor(
     }
 
     fun updateSelectedSymbols(code: String, isChecked: Boolean) {
-        val selectedSymbols = selectedSymbolsUseCase.getSelectedSymbols()
-        if (isChecked) {
-            // adding a symbol
-            selectedSymbolsUseCase.updateSelectedSymbols(selectedSymbols.plus(SymbolItem(code)))
-        } else {
-            // removing a symbol
-            selectedSymbolsUseCase.updateSelectedSymbols(selectedSymbols.filter { it.code != code })
+        viewModelScope.launch {
+            val selectedSymbols = selectedSymbolsUseCase.getSelectedSymbols()
+            if (isChecked) { // adding a symbol
+                getSymbolItem(code)?.let {
+                    selectedSymbolsUseCase.updateSelectedSymbols(selectedSymbols.plus(it))
+                }
+
+            } else { // removing a symbol
+                selectedSymbolsUseCase.updateSelectedSymbols(selectedSymbols.filter { it.code != code })
+            }
         }
     }
+
+    private suspend fun getSymbolItem(code: String): SymbolItem? =
+        symbolByCodeUseCase.getSymbolByCode(code)
 
     data class SelectedSymbols(
         val selectedSymbols: List<SymbolItem>,

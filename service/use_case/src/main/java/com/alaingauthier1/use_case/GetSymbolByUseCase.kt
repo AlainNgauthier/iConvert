@@ -4,9 +4,9 @@ import com.alaingauthier1.common.model.SymbolItem
 import com.alaingauthier1.rates_repository.RatesRepository
 import javax.inject.Inject
 
-class GetAvailableSymbolsUseCase @Inject constructor(
+class GetSymbolByUseCase  @Inject constructor(
     private val ratesRepository: RatesRepository
 ) {
-    suspend fun getAvailableSymbols(): List<SymbolItem> =
-        ratesRepository.getAvailableSymbols()
+    suspend fun getSymbolByCode(code: String): SymbolItem? =
+        ratesRepository.getSymbolItemByCode(code)
 }

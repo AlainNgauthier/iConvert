@@ -24,4 +24,9 @@ class RatesApiServiceImpl @Inject constructor(
             .body()
             ?.rates
             ?.map { RatesItem(it.key, "${it.value}") } ?: emptyList()
+
+    override suspend fun getSymbols(): List<SymbolItem> =
+        api.getSymbols()
+            .body()
+            ?.map { (code, description) -> SymbolItem(code, description) } ?: emptyList()
 }

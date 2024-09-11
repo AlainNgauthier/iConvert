@@ -47,13 +47,14 @@ class EditSymbolsAdapter (
     private fun onItemSelected(code: String, selected: Boolean) {
         onItemClicked(code, selected)
 
-        val checkedSymbol = SymbolItem(code)
-        if (selected) {
-            selectedSymbols.add(checkedSymbol)
-        } else {
-            selectedSymbols.remove(checkedSymbol)
+        allSymbols.firstOrNull { it.code == code }?.let { checkedSymbol ->
+            if (selected) {
+                selectedSymbols.add(checkedSymbol)
+            } else {
+                selectedSymbols.remove(checkedSymbol)
+            }
+            recalculateSelected()
         }
-        recalculateSelected()
     }
 
     private fun recalculateSelected() {

@@ -43,7 +43,7 @@ class RatesFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.getRates(base = SymbolItem("BRL"), amount = 1.0)
+        viewModel.getRates(base = SymbolItem("BRL", " "), amount = 1.0)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

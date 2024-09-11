@@ -48,4 +48,11 @@ dependencies {
 
     implementation(libs.hilt.android)
 
+    // coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+
+    implementation(project(":service:user_settings"))
+    implementation(project(":service:rates_repository"))
+
 }
