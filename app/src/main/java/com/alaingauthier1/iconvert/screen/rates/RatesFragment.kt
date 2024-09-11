@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alaingauthier1.common.model.SymbolItem
 import com.alaingauthier1.iconvert.R
 import com.alaingauthier1.iconvert.databinding.FragmentRatesBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -42,7 +43,7 @@ class RatesFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.getRates()
+        viewModel.getRates(base = SymbolItem("BRL"), amount = 1.0)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

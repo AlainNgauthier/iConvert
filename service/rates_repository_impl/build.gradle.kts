@@ -46,4 +46,8 @@ dependencies {
     implementation(project(":service:rates_repository"))
     implementation(libs.hilt.android)
     kapt("com.google.dagger:hilt-android-compiler:2.46")
+
+    // coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
 }
