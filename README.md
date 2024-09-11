@@ -25,3 +25,5 @@ A arquitetura do projeto segue o padrão MVVM (Model-View-ViewModel):
 
 - Android Studio 4.1 ou superior
 - Gradle 6.5 ou superior
+
+<iConvert-img.png|Print>
